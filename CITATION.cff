@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the repository and the underlying datasets."
+title: "CVCML: Leakage-Audited CVC-Associated Bloodstream Infection Risk Modeling"
+type: software
+authors:
+  - family-names: Gupta
+    given-names: Rijul
+year: 2026
+license: MIT
+repository-code: "https://github.com/rijulgupta4/CVCML"
+keywords:
+  - clinical machine learning
+  - bloodstream infection
+  - central venous catheter
+  - dynamic prediction
+  - MIMIC-IV

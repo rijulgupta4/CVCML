@@ -123,3 +123,7 @@ def main():
 if __name__ == "__main__":
     main()
 
+"""Render aggregate Run 32 transportability figures.
+
+Input tables remain local because they are derived from credentialed data.
+"""

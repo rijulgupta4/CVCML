@@ -168,3 +168,7 @@ def main():
 if __name__ == "__main__":
     main()
 
+"""Assess whether eICU-CRD can reproduce the required catheter episodes.
+
+The script applies a feasibility gate before any external model scoring.
+"""

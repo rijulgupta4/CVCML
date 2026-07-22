@@ -837,3 +837,7 @@ def build():
 if __name__ == "__main__":
     build()
 
+"""Generate the comprehensive report from curated aggregate evidence.
+
+The report summarizes the analytical record; it does not create model results.
+"""

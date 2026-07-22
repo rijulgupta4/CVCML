@@ -45,7 +45,7 @@ The public project should foreground four conclusions:
 3. **The endpoint remains a proxy.** Low agreement with ICD-coded central-line infection demonstrates disagreement between operational definitions, not proof that either is ground truth.
 4. **The plausible role is bounded review prioritization.** Top-k PPV and recall remain uncertain and workload tradeoffs require prospective evaluation.
 
-The repository should not advertise unqualified “CLABSI prediction,” claim external validation, imply a deployable alarm, or compare headline metrics directly with studies using different cohorts, outcomes, horizons, and censoring rules.
+The repository should not advertise unqualified "CLABSI prediction," claim external validation, imply a deployable alarm, or compare headline metrics directly with studies using different cohorts, outcomes, horizons, and censoring rules.
 
 ## Checks Applied
 

@@ -919,3 +919,7 @@ def build():
 if __name__ == "__main__":
     build()
 
+"""Generate report version 0.7 after the Run 34 comparator.
+
+The script assembles text, tables, and figures from existing aggregate outputs.
+"""

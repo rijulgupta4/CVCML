@@ -105,3 +105,13 @@ def main():
 if __name__ == "__main__":
     main()
 
+"""Inspect ARMD-MGB tables for outcome-component transportability.
+
+The audit tests available microbiology and procedure concepts. It does not
+claim full external validation of the CVCML prediction model.
+"""
+"""Inspect ARMD-MGB tables for outcome-component transportability.
+
+The audit tests microbiology and procedure concepts. It does not claim full
+external validation of the CVCML prediction model.
+"""

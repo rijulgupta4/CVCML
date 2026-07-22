@@ -4,11 +4,11 @@ Leakage-audited machine learning for seven-day central-venous-catheter-associate
 
 > **Research prototype. Not for clinical use.** The modeled endpoint is a strict CVC-associated BSI proxy, not adjudicated NHSN CLABSI.
 
-## Project In One View
+## Overview
 
-CVCML began as a static XGBoost model and evolved into an episode-based daily landmark pipeline. The work reconstructs central-line exposure periods, screens blood-culture organisms and plausible secondary sources, separates development from temporal evaluation, and evaluates the score as a bounded infection-prevention review list rather than an interruptive bedside alarm.
+CVCML began as a static XGBoost model and evolved into an episode-based daily landmark pipeline. The pipeline reconstructs central-line exposure periods, screens blood-culture organisms and plausible secondary sources, separates development from temporal evaluation, and evaluates a bounded infection-prevention review list. It is not designed as an interruptive bedside alarm.
 
-The strongest finding is methodological rather than promotional: performance that initially appeared strong fell substantially after correcting outcome-dependent reference times, longest-line selection, and outcome-adjacent features. The final leakage-safe candidate showed modest discrimination and little calibration improvement over a prevalence-only predictor.
+Leakage auditing materially reduced apparent performance. Corrections addressed outcome-dependent reference times, longest-line selection, and outcome-adjacent features. The final leakage-safe candidate showed modest discrimination and little calibration improvement over a prevalence-only predictor.
 
 | Final evaluation | Result |
 |---|---:|
@@ -24,7 +24,7 @@ These values describe retrospective research performance. They do not establish 
 
 ![Episode review policy](results/final/figures/v0_5_run30_episode_review_policy.png)
 
-## What Changed Scientifically
+## Methodological Evolution
 
 1. **Static development:** compared logistic regression, random forest, and XGBoost with static and laboratory features.
 2. **Leakage auditing:** replaced total dwell time with time known at prediction, removed outcome-derived culture indicators, and challenged site-documentation and care-intensity proxies.
@@ -39,6 +39,7 @@ These values describe retrospective research performance. They do not establish 
 - [`src/experiments`](src/experiments): complete run history. Runs 0-14 are historical development; Runs 15-34 contain the v0.5 redesign, validation, characterization, and reporting pipeline.
 - [`results/final`](results/final): publication-style figures and the final model card. No row-level derived data or fitted models are included.
 - [`docs/RUN_INDEX.md`](docs/RUN_INDEX.md): concise map from each run to its purpose.
+- [`docs/CODE_GUIDE.md`](docs/CODE_GUIDE.md): script conventions, reading order, and historical-code boundaries.
 - [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md): data access, local configuration, and execution guidance.
 - [`docs/PUBLICATION_AUDIT.md`](docs/PUBLICATION_AUDIT.md): disclosure and licensing decisions for this public release.
 

@@ -819,3 +819,11 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 
+"""Build the Run 28 aggregate evidence package and model-card documents.
+
+The script reads prior aggregate outputs. It does not refit or select a model.
+"""
+"""Build the Run 28 aggregate evidence package and model-card documents.
+
+The script reads prior aggregate outputs. It does not refit or select a model.
+"""

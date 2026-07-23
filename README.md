@@ -6,7 +6,7 @@ Leakage-audited machine learning for seven-day central-venous-catheter-associate
 
 ## Overview
 
-CVCML began as a static XGBoost model and evolved into an episode-based daily landmark pipeline. The pipeline reconstructs central-line exposure periods, screens blood-culture organisms and plausible secondary sources, separates development from temporal evaluation, and evaluates a bounded infection-prevention review list. It is not designed as an interruptive bedside alarm.
+The CVCML project started as a static XGBoost model and became an episode-based daily landmark pipeline. This pipeline reconstructs central-line exposure periods, screens blood-culture organisms and plausible secondary sources, separates development from temporal evaluation, and evaluates a bounded infection-prevention review list. It's not designed for interruptive bedside alarm.
 
 Leakage auditing materially reduced apparent performance. Corrections addressed outcome-dependent reference times, longest-line selection, and outcome-adjacent features. The final leakage-safe candidate showed modest discrimination and little calibration improvement over a prevalence-only predictor.
 
@@ -28,11 +28,11 @@ These values describe retrospective research performance. They do not establish 
 
 1. **Static development:** compared logistic regression, random forest, and XGBoost with static and laboratory features.
 2. **Leakage auditing:** replaced total dwell time with time known at prediction, removed outcome-derived culture indicators, and challenged site-documentation and care-intensity proxies.
-3. **Outcome refinement:** moved from broad positive-culture labels to a strict CVC-associated BSI proxy with organism logic and partial secondary-source screening.
+3. **Outcome refinement:** moved from more broad positive-culture labels to a strict CVC-associated BSI "proxy" with organism logic and partial secondary-source screening used to define that proxy.
 4. **Dynamic framing:** generated daily landmarks with one seven-day target and explicit discharge, death, and line-removal censoring context.
-5. **Temporal discipline:** trained on 2008-2013, calibrated on 2014-2016, developed/evaluated on 2017-2019, and protected 2020-2022 as a temporal lockbox during model development.
-6. **Operational evaluation:** reported patient-clustered uncertainty, calibration, review-list PPV/recall, false reviews per true positive, subgroup behavior, and error patterns.
-7. **External evidence:** tested feasibility in eICU-CRD and label-component transportability in ARMD-MGB; neither supported full external model validation.
+5. **Temporal training:** trained on 2008-2013, calibrated on 2014-2016, developed/evaluated on 2017-2019, and protected 2020-2022 as a temporal lockbox during model development.
+6. **Operational evaluation:** reported the patient-clustered uncertainty, calibration, review-list PPV/recall, false reviews per true positive, subgroup behavior, and error patterns.
+7. **External evidence:** tested feasibility with eICU-CRD and label-component transportability with ARMD-MGB; neither supported a full external model validation, but contributed to areas of the model's learning.
 
 ## Repository Map
 
@@ -51,7 +51,7 @@ The MIT license applies only to original software and repository-authored docume
 
 ## Current Interpretation
 
-The final model is best understood as a transparent retrospective experiment in infection-prevention review prioritization. It is not a diagnostic model and is not ready for deployment. The project contributes an auditable example of how cohort construction, outcome definition, leakage control, calibration, and workflow burden can materially change the apparent value of a clinical prediction model.
+The final model is best seen as a retrospective tool in infection-prevention review prioritization. It is not quite a diagnostic model and is not ready for deployment. The project, however, contributes as a strong auditable example of how cohort construction, outcome definition, leakage control, calibration, and workflow burden can materially change the apparent value of a clinical prediction model.
 
 ## Citation
 
